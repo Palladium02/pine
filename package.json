@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Library for creating http/s server.",
   "main": "build/index.js",
+  "types": "build/index.d.ts",
   "scripts": {
     "test": "exit 0",
     "build": "tsc -p ./tsconfig.json"
