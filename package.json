@@ -1,0 +1,33 @@
+{
+  "name": "pine",
+  "version": "1.0.0",
+  "description": "Library for creating http/s server.",
+  "main": "build/index.js",
+  "scripts": {
+    "test": "exit 0",
+    "build": "tsc -p ./tsconfig.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Palladium02/pine.git"
+  },
+  "keywords": [
+    "http",
+    "https",
+    "web"
+  ],
+  "author": "Sean Meyer",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Palladium02/pine/issues"
+  },
+  "homepage": "https://github.com/Palladium02/pine#readme",
+  "devDependencies": {
+    "@types/node": "^17.0.42",
+    "@typescript-eslint/eslint-plugin": "^5.28.0",
+    "@typescript-eslint/parser": "^5.28.0",
+    "eslint": "^8.17.0",
+    "eslint-config-google": "^0.14.0",
+    "typescript": "^4.7.3"
+  }
+}

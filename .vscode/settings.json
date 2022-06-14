@@ -1,0 +1,8 @@
+{
+  "[typescript]": {
+    "files.eol": "\n"
+  },
+  "[javascript]": {
+    "files.eol": "\n"
+  }
+}
