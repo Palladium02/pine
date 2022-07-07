@@ -1,5 +1,10 @@
 # Changelog
 
+## v1.0.2
+
+- added Logger
+  - supports info messages
+
 ## v1.0.1
 
 - enhanced parsing logic for the request url

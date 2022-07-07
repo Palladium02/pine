@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.verify = exports.createSignature = exports.sign = exports.webtoken = exports.decode = exports.Table = exports.Router = exports.parseURL = exports.Body = exports.Response = exports.Request = exports.Context = exports.HttpUnauthorized = exports.HttpBadRequest = exports.HttpForbidden = exports.HttpException = exports.Events = exports.State = exports.Application = void 0;
+exports.Logger = exports.verify = exports.createSignature = exports.sign = exports.webtoken = exports.decode = exports.Table = exports.Router = exports.parseURL = exports.Body = exports.Response = exports.Request = exports.Context = exports.HttpUnauthorized = exports.HttpBadRequest = exports.HttpForbidden = exports.HttpException = exports.Events = exports.State = exports.Application = void 0;
 var application_1 = require("./application");
 Object.defineProperty(exports, "Application", { enumerable: true, get: function () { return application_1.Application; } });
 Object.defineProperty(exports, "State", { enumerable: true, get: function () { return application_1.State; } });
@@ -25,3 +25,5 @@ Object.defineProperty(exports, "webtoken", { enumerable: true, get: function () 
 Object.defineProperty(exports, "sign", { enumerable: true, get: function () { return webtokens_1.sign; } });
 Object.defineProperty(exports, "createSignature", { enumerable: true, get: function () { return webtokens_1.createSignature; } });
 Object.defineProperty(exports, "verify", { enumerable: true, get: function () { return webtokens_1.verify; } });
+var logger_1 = require("./logger");
+Object.defineProperty(exports, "Logger", { enumerable: true, get: function () { return logger_1.Logger; } });
