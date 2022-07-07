@@ -1,2 +1,2 @@
 export {Body} from './body';
-export {querystring} from './query';
+export {parseURL} from './query';

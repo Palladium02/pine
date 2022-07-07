@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.verify = exports.createSignature = exports.sign = exports.webtoken = exports.decode = exports.Table = exports.Router = exports.querystring = exports.Body = exports.Response = exports.Request = exports.Context = exports.HttpUnauthorized = exports.HttpBadRequest = exports.HttpForbidden = exports.HttpException = exports.Events = exports.State = exports.Application = void 0;
+exports.verify = exports.createSignature = exports.sign = exports.webtoken = exports.decode = exports.Table = exports.Router = exports.parseURL = exports.Body = exports.Response = exports.Request = exports.Context = exports.HttpUnauthorized = exports.HttpBadRequest = exports.HttpForbidden = exports.HttpException = exports.Events = exports.State = exports.Application = void 0;
 var application_1 = require("./application");
 Object.defineProperty(exports, "Application", { enumerable: true, get: function () { return application_1.Application; } });
 Object.defineProperty(exports, "State", { enumerable: true, get: function () { return application_1.State; } });
@@ -15,7 +15,7 @@ Object.defineProperty(exports, "Request", { enumerable: true, get: function () {
 Object.defineProperty(exports, "Response", { enumerable: true, get: function () { return context_1.Response; } });
 var parser_1 = require("./parser");
 Object.defineProperty(exports, "Body", { enumerable: true, get: function () { return parser_1.Body; } });
-Object.defineProperty(exports, "querystring", { enumerable: true, get: function () { return parser_1.querystring; } });
+Object.defineProperty(exports, "parseURL", { enumerable: true, get: function () { return parser_1.parseURL; } });
 var routing_1 = require("./routing");
 Object.defineProperty(exports, "Router", { enumerable: true, get: function () { return routing_1.Router; } });
 Object.defineProperty(exports, "Table", { enumerable: true, get: function () { return routing_1.Table; } });

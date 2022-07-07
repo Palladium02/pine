@@ -12,6 +12,7 @@ class Request {
     query: Record<string, string>,
     cookies: Record<string, string>,
     url: string,
+    fragment: string,
   };
 
   /**
@@ -22,6 +23,7 @@ class Request {
    * @param {Record<string, string>} query
    * @param {any} cookies
    * @param {String} url
+   * @param {String} fragment
    */
   public constructor(
       headers: http.IncomingHttpHeaders,
@@ -30,6 +32,7 @@ class Request {
       query: Record<string, string>,
       cookies: any,
       url: string,
+      fragment: string,
   ) {
     this._internals = {
       headers,
@@ -37,6 +40,7 @@ class Request {
       query,
       cookies,
       url,
+      fragment,
       body: new Body(body, headers['content-type'] || ''),
     };
   }
@@ -103,6 +107,14 @@ class Request {
    */
   public url(): string {
     return this._internals.url;
+  }
+
+  /**
+   * Method that returns the fragment property.
+   * @return {String}
+   */
+  public fragment(): string {
+    return this._internals.fragment;
   }
 }
 

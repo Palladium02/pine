@@ -2,7 +2,7 @@ import http from 'http';
 import https from 'https';
 import {Context, Request, Response} from '../context';
 import {Router, Table, HttpVerb} from '../routing';
-import {querystring} from '../parser';
+import {parseURL} from '../parser';
 import {State, HttpException, Events} from './';
 
 interface ApplicationConfiguration {
@@ -132,7 +132,7 @@ class Application {
           const method = (
             NativeRequest.method?.toUpperCase() || 'GET'
           ) as HttpVerb;
-          const [url, query] = querystring(NativeRequest.url || '');
+          const [url, query, fragment] = parseURL(NativeRequest.url || '');
           const match = this._internals.table.getMatch(url, method);
 
           if (match) {
@@ -140,7 +140,7 @@ class Application {
             const request = new Request(
                 NativeRequest.headers, Buffer.from(body),
                 parameter, query,
-                {}, url,
+                {}, url, fragment,
             );
             const response = new Response(NativeResponse, method);
             const state = new State();

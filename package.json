@@ -1,6 +1,6 @@
 {
   "name": "pine",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Library for creating http/s server.",
   "main": "build/index.js",
   "types": "build/index.d.ts",

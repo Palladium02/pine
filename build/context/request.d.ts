@@ -15,8 +15,9 @@ declare class Request {
      * @param {Record<string, string>} query
      * @param {any} cookies
      * @param {String} url
+     * @param {String} fragment
      */
-    constructor(headers: http.IncomingHttpHeaders, body: Buffer, params: Record<string, string>, query: Record<string, string>, cookies: any, url: string);
+    constructor(headers: http.IncomingHttpHeaders, body: Buffer, params: Record<string, string>, query: Record<string, string>, cookies: any, url: string, fragment: string);
     header(): any;
     header(key: string): string;
     /**
@@ -35,5 +36,10 @@ declare class Request {
      * @return {String}
      */
     url(): string;
+    /**
+     * Method that returns the fragment property.
+     * @return {String}
+     */
+    fragment(): string;
 }
 export { Request };

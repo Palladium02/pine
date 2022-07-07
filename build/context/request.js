@@ -14,14 +14,16 @@ class Request {
      * @param {Record<string, string>} query
      * @param {any} cookies
      * @param {String} url
+     * @param {String} fragment
      */
-    constructor(headers, body, params, query, cookies, url) {
+    constructor(headers, body, params, query, cookies, url, fragment) {
         this._internals = {
             headers,
             params,
             query,
             cookies,
             url,
+            fragment,
             body: new parser_1.Body(body, headers['content-type'] || ''),
         };
     }
@@ -78,6 +80,13 @@ class Request {
      */
     url() {
         return this._internals.url;
+    }
+    /**
+     * Method that returns the fragment property.
+     * @return {String}
+     */
+    fragment() {
+        return this._internals.fragment;
     }
 }
 exports.Request = Request;

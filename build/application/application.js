@@ -119,11 +119,11 @@ class Application {
             .on('end', () => __awaiter(this, void 0, void 0, function* () {
             var _a;
             const method = (((_a = NativeRequest.method) === null || _a === void 0 ? void 0 : _a.toUpperCase()) || 'GET');
-            const [url, query] = (0, parser_1.querystring)(NativeRequest.url || '');
+            const [url, query, fragment] = (0, parser_1.parseURL)(NativeRequest.url || '');
             const match = this._internals.table.getMatch(url, method);
             if (match) {
                 const { handler, parameter, features } = match;
-                const request = new context_1.Request(NativeRequest.headers, Buffer.from(body), parameter, query, {}, url);
+                const request = new context_1.Request(NativeRequest.headers, Buffer.from(body), parameter, query, {}, url, fragment);
                 const response = new context_1.Response(NativeResponse, method);
                 const state = new _1.State();
                 const context = new context_1.Context(request, response, NativeRequest, NativeResponse, state, this);
